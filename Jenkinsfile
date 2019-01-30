@@ -1,21 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Stage 1') {
       steps {
         checkout scm
       }
     }
-    stage('Build Release') {
+    stage('Stage 2') {
       steps {
         echo "Build Release"
-        sleep 60
+        sleep 30
       }
     }
-    stage('Promote to Environments') {
+    stage('Stage 3') {
       steps {
         echo "Promote to Environments"
-        sleep 60
+        sleep 30
       }
     }
   }
